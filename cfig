@@ -1,0 +1,5 @@
+#!/bin/bash
+cmake -B build -GNinja \
+  -DTHEROCK_ENABLE_ALL=OFF \
+  -DTHEROCK_ENABLE_CORE=OFF \
+  .
