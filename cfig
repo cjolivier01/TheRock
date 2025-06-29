@@ -1,4 +1,5 @@
 #!/bin/bash
+CC=amdclang CXX=amdclang++ \
 cmake -B build -GNinja \
   -DTHEROCK_AMDGPU_FAMILIES=gfx1201 \
   -DTHEROCK_ENABLE_ALL=ON \
