@@ -1,0 +1,7 @@
+#!/bin/bash
+NCCL_INCLUDE_DIRS=/opt/rocm/include \
+  NCCL_LIBRARIES=/opt/rocm/lib \
+  python \
+  external-builds/pytorch/build_prod_wheels.py \
+  build \
+  --output-dir=$HOME/py-out
