@@ -1,0 +1,9 @@
+#!/bin/bash
+set -e
+cd build
+for i in $(find -name artifact_manifest.txt); do 
+  for j in $(cat $i); do
+    echo "Install $j artifacts..."
+    cp -ru $j/* ~/rocm/
+  done
+done
