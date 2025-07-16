@@ -21,3 +21,7 @@ __pycache__
 /output-*/
 /out/
 .cache
+/dist
+/rocm-0.1.dev0
+/therock-build
+/venv
