@@ -1,6 +1,11 @@
 #!/bin/bash
-NCCL_INCLUDE_DIRS=/opt/rocm/include \
-  NCCL_LIBRARIES=/opt/rocm/lib \
+NCCL_INCLUDE_DIR=/opt/rocm/include \
+  NCCL_ROOT=/opt/rocm \
+  NCCL_LIB_DIR=/opt/rocm/lib \
+  NCCL_INCLUDE_DIR=/opt/rocm/rccl \
+  USE_CUDA=OFF \
+  USE_ROCM=ON \
+  DEBUG=1 \
   python \
   external-builds/pytorch/build_prod_wheels.py \
   build \
