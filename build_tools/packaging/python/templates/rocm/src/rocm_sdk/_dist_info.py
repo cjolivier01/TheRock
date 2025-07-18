@@ -8,7 +8,6 @@ import importlib.util
 import os
 import platform
 
-
 CACHED_TARGET_FAMILY: str | None = None
 
 
@@ -161,8 +160,8 @@ PackageEntry(
 # TODO(#703): Use patterns for version suffixes and platform differences.
 
 # Public libraries.
-LibraryEntry("amdhip64", "core", "libamdhip64.so.6", "amdhip64_6.dll")
-LibraryEntry("hiprtc", "core", "libhiprtc.so.6", "hiprtc0605.dll")
+LibraryEntry("amdhip64", "core", "libamdhip64.so.7", "amdhip64_7.dll")
+LibraryEntry("hiprtc", "core", "libhiprtc.so.7", "hiprtc0605.dll")
 LibraryEntry("roctx64", "core", "libroctx64.so.4", "")
 LibraryEntry("rocprofiler-sdk-roctx", "core", "librocprofiler-sdk-roctx.so.1", "")
 
