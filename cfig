@@ -1,6 +1,6 @@
 #!/bin/bash
 cmake -B build -GNinja \
-  -DCMAKE_BUILD_TYPE=Debug \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
   -DTHEROCK_BUNDLE_SYSDEPS=ON \
   -DTHEROCK_AMDGPU_FAMILIES=gfx1200 \
   -DTHEROCK_ENABLE_ALL=OFF \
