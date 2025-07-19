@@ -1,0 +1,9 @@
+#!/bin/bash
+AOTRITON_INSTALL_FROM_SOURCE=1 \
+  USE_CUDA=OFF \
+  USE_ROCM=ON \
+  DEBUG=1 \
+  python \
+  external-builds/pytorch/build_prod_wheels.py \
+  build \
+  --output-dir=$HOME/py-out
