@@ -1,8 +1,5 @@
 #!/bin/bash
-NCCL_INCLUDE_DIR=/opt/rocm/include \
-  NCCL_ROOT=/opt/rocm \
-  NCCL_LIB_DIR=/opt/rocm/lib \
-  NCCL_INCLUDE_DIR=/opt/rocm/rccl \
+AOTRITON_INSTALL_FROM_SOURCE=1 \
   USE_CUDA=OFF \
   USE_ROCM=ON \
   DEBUG=1 \
