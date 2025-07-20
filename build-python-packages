@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+cmake --build build --target therock-archives
+python ./build_tools/build_python_packages.py --artifact-dir=build/artifacts --dest-dir=build/packages
