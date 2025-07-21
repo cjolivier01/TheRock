@@ -1,3 +1,12 @@
+set(CMAKE_BUILD_TYPE "Debug")
+
+if (CMAKE_BUILD_TYPE STREQUAL "Debug")
+  add_compile_options(-g)
+  add_compile_options(-Wl,-g)
+  add_compile_options(-O0)
+  add_compile_options(-fno-omit-frame-pointer)
+endif()
+
 if(THEROCK_ENABLE_CORE_RUNTIME)
   ##############################################################################
   # ROCR-Runtime
@@ -66,6 +75,7 @@ if(THEROCK_ENABLE_CORE_RUNTIME)
 endif(THEROCK_ENABLE_CORE_RUNTIME)
 
 if(THEROCK_ENABLE_HIP_RUNTIME)
+  set(CMAKE_BUILD_TYPE "Debug")
   ##############################################################################
   # clr
   # The primary HIP compiler and runtime target. This is also the project used
