@@ -1,4 +1,5 @@
 #!/bin/bash
+# MI300: gfx942
 cmake -B build -GNinja \
   -DCMAKE_BUILD_TYPE=RelWithDebInfo \
   -DTHEROCK_BUNDLE_SYSDEPS=ON \
