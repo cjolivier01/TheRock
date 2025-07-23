@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+PPACKAGE_ROOT=$(realpath "$(dirname $(python -c 'import os; import rocm_sdk; print(rocm_sdk.__file__)'))"/..)
+echo "PPACKAGE_ROOT=${PPACKAGE_ROOT}"
+for i in $(find "${PPACKAGE_ROOT}/_rocm_sdk_core/lib" -maxdepth 1 -name "*.so.*"); do
+  BASENAME="$(basename $i)"
+  # echo "$i -- ${BASENAME}"
+  FILE="$(find build/core -name ${BASENAME} | head -n 1)"
+  if [ -z "${FILE}" ]; then
+    continue
+  fi
+  # echo "FILE=$FILE"
+  ln -sfv "$(pwd)/${FILE}" "$i"
+done
